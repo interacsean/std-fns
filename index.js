@@ -1,5 +1,4 @@
-const core = require('./core');
-const async = require('./async');
+// @flow
 
-module.exports.core = core;
-module.exports.async = async;
+export { default as core } from './src/core';
+export { default as async } from './src/async';

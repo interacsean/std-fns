@@ -1,0 +1,16 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "plugin:flowtype/recommended"
+  ],
+  "plugins": [
+    "flowtype"
+  ],
+  "rules": {
+    "flowtype/require-parameter-type": 2,
+    "flowtype/require-return-type": 2,
+    "flowtype/require-valid-file-annotation": 2,
+    "flowtype/require-variable-type": 2,
+    "flowtype/newline-after-flow-annotation": 2
+  }
+}
