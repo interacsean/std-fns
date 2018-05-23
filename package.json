@@ -1,6 +1,6 @@
 {
   "name": "std-fns",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Functional JavaScript Library",
   "main": "index.js",
   "repository": "https://github.com/dandro/std-fns",
