@@ -1,15 +1,7 @@
 // @flow
 
-import { default as bimap } from './bimap/bimap';
-import { default as fmap } from './fmap/fmap';
-import { default as lmap } from './lmap/lmap';
-import { default as map } from './map/map';
-import { default as tap } from './tap/tap';
-
-export default {
-  bimap,
-  fmap,
-  lmap,
-  map,
-  tap,
-};
+export { default as bimap } from './bimap/bimap';
+export { default as fmap } from './fmap/fmap';
+export { default as lmap } from './lmap/lmap';
+export { default as map } from './map/map';
+export { default as tap } from './tap/tap';

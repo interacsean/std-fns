@@ -6,20 +6,47 @@ Object.defineProperty(exports, "__esModule", {
 
 var _bimap = require('./bimap/bimap');
 
-var _bimap2 = _interopRequireDefault(_bimap);
+Object.defineProperty(exports, 'bimap', {
+  enumerable: true,
+  get: function () {
+    return _interopRequireDefault(_bimap).default;
+  }
+});
+
+var _fmap = require('./fmap/fmap');
+
+Object.defineProperty(exports, 'fmap', {
+  enumerable: true,
+  get: function () {
+    return _interopRequireDefault(_fmap).default;
+  }
+});
+
+var _lmap = require('./lmap/lmap');
+
+Object.defineProperty(exports, 'lmap', {
+  enumerable: true,
+  get: function () {
+    return _interopRequireDefault(_lmap).default;
+  }
+});
 
 var _map = require('./map/map');
 
-var _map2 = _interopRequireDefault(_map);
+Object.defineProperty(exports, 'map', {
+  enumerable: true,
+  get: function () {
+    return _interopRequireDefault(_map).default;
+  }
+});
 
 var _tap = require('./tap/tap');
 
-var _tap2 = _interopRequireDefault(_tap);
+Object.defineProperty(exports, 'tap', {
+  enumerable: true,
+  get: function () {
+    return _interopRequireDefault(_tap).default;
+  }
+});
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = {
-  bimap: _bimap2.default,
-  map: _map2.default,
-  tap: _tap2.default
-};

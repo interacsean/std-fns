@@ -6,15 +6,20 @@ Object.defineProperty(exports, "__esModule", {
 
 var _partial = require('./partial/partial');
 
-var _partial2 = _interopRequireDefault(_partial);
+Object.defineProperty(exports, 'partial', {
+  enumerable: true,
+  get: function () {
+    return _interopRequireDefault(_partial).default;
+  }
+});
 
 var _partialRight = require('./partialRight/partialRight');
 
-var _partialRight2 = _interopRequireDefault(_partialRight);
+Object.defineProperty(exports, 'partialRight', {
+  enumerable: true,
+  get: function () {
+    return _interopRequireDefault(_partialRight).default;
+  }
+});
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = {
-  partial: _partial2.default,
-  partialRight: _partialRight2.default
-};
