@@ -7,16 +7,16 @@
   "author": "dnlmrtnz",
   "license": "MIT",
   "scripts": {
-    "test": "jest ./",
+    "test": "jest ./src",
     "check": "eslint ./src && flow ./src",
-    "build": "babel src/ -d dist/"
+    "build": "babel src/ -d ./"
   },
   "devDependencies": {
     "babel-cli": "6.26.0",
     "babel-eslint": "8.2.3",
     "babel-preset-env": "1.7.0",
     "babel-preset-flow": "6.23.0",
-    "eslint": "^5.2.0",
+    "eslint": "5.2.0",
     "eslint-plugin-flowtype": "2.47.1",
     "flow-bin": "0.72.0",
     "jest": "22.4.4"
