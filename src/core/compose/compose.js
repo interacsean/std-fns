@@ -1,5 +1,10 @@
 // @flow
 
+/**
+ * Compose a function from all functions passed as arguments from left to right.
+ * @param fns {Function} - Comma separated list of functions
+ * @returns {function(...[Array<*>]): Function}
+ */
 function compose(...fns: Array<Function>): Function {
   return function(...args: Array<mixed>): any {
     return fns

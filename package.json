@@ -9,7 +9,8 @@
   "scripts": {
     "test": "jest ./src",
     "check": "eslint ./src && flow ./src",
-    "build": "babel src/ -d ./"
+    "build": "babel src/ -d ./ && yarn build:docs",
+    "build:docs": "node ./scripts/docs"
   },
   "devDependencies": {
     "babel-cli": "6.26.0",
@@ -19,6 +20,7 @@
     "eslint": "5.2.0",
     "eslint-plugin-flowtype": "2.47.1",
     "flow-bin": "0.72.0",
-    "jest": "22.4.4"
+    "jest": "22.4.4",
+    "jsdoc-to-markdown": "^4.0.1"
   }
 }

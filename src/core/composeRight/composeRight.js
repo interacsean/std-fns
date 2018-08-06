@@ -1,5 +1,10 @@
 // @flow
 
+/**
+ * Compose a function from all functions passed as arguments from right to left.
+ * @param fns {Function}
+ * @returns {function(...[Array<*>]): Function}
+ */
 function composeRight(...fns: Array<Function>): Function {
   return function(...args: Array<mixed>): any {
     const reversedFns: Array<Function> = fns.reverse();
