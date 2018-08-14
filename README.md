@@ -21,6 +21,12 @@ Standard Functions is a library aimed to fill in the gaps in the JS standard lib
 <dt><a href="#tap">tap(fn, p)</a> ⇒ <code>Promise.&lt;T&gt;</code></dt>
 <dd><p>Create a side effect from the value of a promise. The tap function is only called if the promise is resolved.</p>
 </dd>
+<dt><a href="#always">always(val)</a> ⇒ <code>function</code></dt>
+<dd><p>Creates a function which always returns the same value.</p>
+</dd>
+<dt><a href="#and">and(...args)</a> ⇒ <code>*</code></dt>
+<dd><p>Evaluates all arguments passed and returns the first falsey or last truthy value. It works like &amp;&amp; operator.</p>
+</dd>
 <dt><a href="#compose">compose(...fns)</a> ⇒ <code>function</code></dt>
 <dd><p>Compose a function from all functions passed as arguments from left to right.</p>
 </dd>
@@ -36,11 +42,27 @@ Standard Functions is a library aimed to fill in the gaps in the JS standard lib
 <dt><a href="#identity">identity(val)</a> ⇒ <code>T</code></dt>
 <dd><p>Pass a value to a function which returns said value.</p>
 </dd>
+<dt><a href="#inst">inst(methodName, val)</a> ⇒ <code>any</code> | <code>null</code></dt>
+<dd><p>Call instance method of an object.</p>
+</dd>
+<dt><a href="#negate">negate(fn)</a> ⇒ <code>function</code></dt>
+<dd><p>Creates a function which negates the value of the result.
+Works like the ! operator on the result of the function provided</p>
+</dd>
+<dt><a href="#not">not(val)</a> ⇒ <code>boolean</code></dt>
+<dd><p>Negates a argument to a boolean value like the ! operator.</p>
+</dd>
+<dt><a href="#or">or(...args)</a> ⇒ <code>*</code></dt>
+<dd><p>Evaluates all arguments passed and returns the first truthy or last falsey value. It works like || operator.</p>
+</dd>
 <dt><a href="#partial">partial(fn, ...args)</a> ⇒ <code>function</code></dt>
 <dd><p>Partially apply arguments to a function from left to right.</p>
 </dd>
 <dt><a href="#partialRight">partialRight(fn, ...outerArgs)</a> ⇒ <code>function</code></dt>
 <dd><p>Partially apply arguments to a function from right to left.</p>
+</dd>
+<dt><a href="#trim">trim(val)</a> ⇒ <code>string</code></dt>
+<dd><p>Trims a string. Works like the string trim method.</p>
 </dd>
 <dt><a href="#dec">dec(num)</a> ⇒ <code>number</code></dt>
 <dd><p>Decrement a number by one.</p>
@@ -117,6 +139,28 @@ Create a side effect from the value of a promise. The tap function is only calle
 | fn | <code>function</code> | 
 | p | <code>Promise.&lt;T&gt;</code> | 
 
+<a name="always"></a>
+
+## always(val) ⇒ <code>function</code>
+Creates a function which always returns the same value.
+
+**Kind**: global function  
+
+| Param | Type |
+| --- | --- |
+| val | <code>\*</code> | 
+
+<a name="and"></a>
+
+## and(...args) ⇒ <code>\*</code>
+Evaluates all arguments passed and returns the first falsey or last truthy value. It works like && operator.
+
+**Kind**: global function  
+
+| Param | Type |
+| --- | --- |
+| ...args | <code>Array.&lt;mixed&gt;</code> | 
+
 <a name="compose"></a>
 
 ## compose(...fns) ⇒ <code>function</code>
@@ -174,6 +218,51 @@ Pass a value to a function which returns said value.
 | --- | --- |
 | val | <code>T</code> | 
 
+<a name="inst"></a>
+
+## inst(methodName, val) ⇒ <code>any</code> \| <code>null</code>
+Call instance method of an object.
+
+**Kind**: global function  
+
+| Param | Type |
+| --- | --- |
+| methodName | <code>String</code> | 
+| val | <code>Object</code> | 
+
+<a name="negate"></a>
+
+## negate(fn) ⇒ <code>function</code>
+Creates a function which negates the value of the result.Works like the ! operator on the result of the function provided
+
+**Kind**: global function  
+
+| Param | Type |
+| --- | --- |
+| fn | <code>function</code> | 
+
+<a name="not"></a>
+
+## not(val) ⇒ <code>boolean</code>
+Negates a argument to a boolean value like the ! operator.
+
+**Kind**: global function  
+
+| Param | Type |
+| --- | --- |
+| val | <code>\*</code> | 
+
+<a name="or"></a>
+
+## or(...args) ⇒ <code>\*</code>
+Evaluates all arguments passed and returns the first truthy or last falsey value. It works like || operator.
+
+**Kind**: global function  
+
+| Param | Type |
+| --- | --- |
+| ...args | <code>Array.&lt;mixed&gt;</code> | 
+
 <a name="partial"></a>
 
 ## partial(fn, ...args) ⇒ <code>function</code>
@@ -197,6 +286,17 @@ Partially apply arguments to a function from right to left.
 | --- | --- | --- |
 | fn | <code>function</code> |  |
 | ...outerArgs | <code>Array.&lt;mixed&gt;</code> | Comma separated list of values. |
+
+<a name="trim"></a>
+
+## trim(val) ⇒ <code>string</code>
+Trims a string. Works like the string trim method.
+
+**Kind**: global function  
+
+| Param |
+| --- |
+| val | 
 
 <a name="dec"></a>
 
