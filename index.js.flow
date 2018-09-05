@@ -1,0 +1,84 @@
+// @flow strict
+
+declare module 'std-fns/async' {
+  declare export function bimap<E, T, V>(
+    ($ReadOnly<Error>) => E,
+    ($ReadOnly<T>) => V,
+    Promise<T | Error>
+  ): Promise<E | V>;
+
+  declare export function fmap<T, V>(
+    ($ReadOnly<T>) => Promise<V>,
+    Promise<T | Error>
+  ): Promise<V>;
+
+  declare export function lmap<T, E>(
+    ($ReadOnly<Error>) => Promise<E>,
+    Promise<T | Error>
+  ): Promise<T | E>;
+
+  declare export function map<T, V>(
+    ($ReadOnly<T>) => V,
+    Promise<T | Error>
+  ): Promise<V | Error>;
+
+  declare export function tap<T>(
+    ($ReadOnly<T>) => void,
+    Promise<T | Error>
+  ): Promise<T | Error>;
+}
+
+declare module 'std-fns/core' {
+  declare export function always<T>(T): () => T;
+
+  declare export function and(...$ReadOnlyArray<mixed>): any;
+
+  declare export function compose(...fns: $ReadOnlyArray<Function>): Function;
+
+  declare export function composeRight(...fns: $ReadOnlyArray<Function>): Function;
+
+  declare export function curry(
+    Function,
+    ...$ReadOnlyArray<mixed>
+  ): (...$ReadOnlyArray<mixed>) => any;
+
+  declare export function curryRight(
+    Function,
+    ...$ReadOnlyArray<mixed>
+  ): (...$ReadOnlyArray<mixed>) => any;
+
+  declare export function identity<T>(T): T;
+
+  declare export function inst(
+    string,
+    Object
+  ): ?any;
+
+  declare export function negate(fn: Function): (...args: $ReadOnlyArray<mixed>) => boolean;
+
+  declare export function not(val: any): boolean;
+
+  declare export function or(...args: $ReadOnlyArray<mixed>): any;
+
+  declare export function partial<T>(
+    (...$ReadOnlyArray<any>) => T,
+    ...$ReadOnlyArray<mixed>
+  ): (...$ReadOnlyArray<any>) => T;
+
+  declare export function partialRight<T>(
+    (...$ReadOnlyArray<any>) => T,
+    ...$ReadOnlyArray<mixed>
+  ): (...$ReadOnlyArray<any>) => T;
+
+  declare export function trim(val: string): string;
+}
+
+declare module 'std-fns/numbers' {
+  declare export function dec(number): number;
+
+  declare export function inc(number): number;
+
+  declare export function subtract(...$ReadOnlyArray<number>): number;
+
+  declare export function sum(...$ReadOnlyArray<number>): number;
+}

@@ -7,7 +7,7 @@ Object.defineProperty(exports, "__esModule", {
 
 /**
  * Evaluates all arguments passed and returns the first truthy or last falsey value. It works like || operator.
- * @param args {Array<mixed>}
+ * @param args {$ReadOnlyArray<mixed>}
  * @returns {*}
  */
 function or(...args) {

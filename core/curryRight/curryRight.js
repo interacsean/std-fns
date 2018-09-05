@@ -7,7 +7,7 @@ function nest(func, args) {
   return (...vals) => {
     const nextArgs = args.concat(vals);
     if (nextArgs.length === func.length) {
-      return func(...nextArgs.reverse());
+      return func(...nextArgs.concat([]).reverse());
     }
 
     return nest(func, nextArgs);
@@ -17,7 +17,7 @@ function nest(func, args) {
 /**
  * Curry a function taking arguments from right to left. The constructor function accepts multiple value arguments. Returned functions also accept multiple arguments.
  * @param fn {Function}
- * @param initialArgs {Array<mixed>} - Comma separated list of arguments. Can be undefined.
+ * @param initialArgs {$ReadOnlyArray<mixed>} - Comma separated list of arguments. Can be undefined.
  * @returns {Function}
  */
 function curryRight(fn, ...initialArgs) {

@@ -9,7 +9,7 @@ Object.defineProperty(exports, "__esModule", {
  * Creates a function which negates the value of the result.
  * Works like the ! operator on the result of the function provided
  * @param fn {Function}
- * @returns {function(...[Array<*>]): boolean}
+ * @returns {function(...[$ReadOnlyArray<*>]): boolean}
  */
 function negate(fn) {
   return function negated(...args) {

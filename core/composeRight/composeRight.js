@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", {
  */
 function composeRight(...fns) {
   return function (...args) {
-    const reversedFns = fns.reverse();
+    const reversedFns = fns.concat([]).reverse();
 
     return reversedFns.slice(1).reduce((result, fn) => fn(result), reversedFns[0](...args));
   };

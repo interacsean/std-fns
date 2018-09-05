@@ -205,7 +205,7 @@ Curry a function taking arguments from right to left. The constructor function a
 | Param | Type | Description |
 | --- | --- | --- |
 | fn | <code>function</code> |  |
-| ...initialArgs | <code>Array.&lt;mixed&gt;</code> | Comma separated list of arguments. Can be undefined. |
+| ...initialArgs | <code>$ReadOnlyArray.&lt;mixed&gt;</code> | Comma separated list of arguments. Can be undefined. |
 
 <a name="identity"></a>
 
@@ -261,7 +261,7 @@ Evaluates all arguments passed and returns the first truthy or last falsey value
 
 | Param | Type |
 | --- | --- |
-| ...args | <code>Array.&lt;mixed&gt;</code> | 
+| ...args | <code>$ReadOnlyArray.&lt;mixed&gt;</code> | 
 
 <a name="partial"></a>
 
@@ -273,7 +273,7 @@ Partially apply arguments to a function from left to right.
 | Param | Type | Description |
 | --- | --- | --- |
 | fn | <code>function</code> |  |
-| ...args | <code>Array.&lt;mixed&gt;</code> | Comma separated list of values. |
+| ...args | <code>$ReadOnlyArray.&lt;mixed&gt;</code> | Comma separated list of values. |
 
 <a name="partialRight"></a>
 
@@ -285,7 +285,7 @@ Partially apply arguments to a function from right to left.
 | Param | Type | Description |
 | --- | --- | --- |
 | fn | <code>function</code> |  |
-| ...outerArgs | <code>Array.&lt;mixed&gt;</code> | Comma separated list of values. |
+| ...outerArgs | <code>$ReadOnlyArray.&lt;mixed&gt;</code> | Comma separated list of values. |
 
 <a name="trim"></a>
 

@@ -9,7 +9,8 @@
   "scripts": {
     "test": "jest ./src",
     "check": "eslint ./src && flow ./src",
-    "build": "babel src/ -d ./ && yarn build:docs",
+    "build": "yarn check && babel src/ -d ./ --ignore **/*spec.js && yarn build:docs && yarn build:types",
+    "build:types": "flow-copy-source -v -i **/*spec.js src ./",
     "build:docs": "node ./scripts/docs"
   },
   "devDependencies": {
@@ -20,6 +21,7 @@
     "eslint": "5.2.0",
     "eslint-plugin-flowtype": "2.47.1",
     "flow-bin": "0.72.0",
+    "flow-copy-source": "^2.0.2",
     "jest": "22.4.4",
     "jsdoc-to-markdown": "^4.0.1"
   }

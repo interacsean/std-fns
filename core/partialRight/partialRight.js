@@ -8,8 +8,8 @@ Object.defineProperty(exports, "__esModule", {
 /**
  * Partially apply arguments to a function from right to left.
  * @param fn {Function}
- * @param outerArgs {Array<mixed>} - Comma separated list of values.
- * @returns {function(...[Array<*>]): T}
+ * @param outerArgs {$ReadOnlyArray<mixed>} - Comma separated list of values.
+ * @returns {function(...[$ReadOnlyArray<*>]): T}
  */
 function partialRight(fn, ...outerArgs) {
   return function (...innerArgs) {
