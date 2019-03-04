@@ -6,11 +6,11 @@
  * @param p {Promise<T | never>}
  * @returns {Promise<T | never>}
  */
-function lmap<T>(
-  fn: (T) => any,
+function lmap<T, E>(
+  fn: (E) => any,
   p: Promise<T>
-): Promise<any> {
-  return p.catch(fn);
+): Promise<T> {
+  return p.catch((e: E): Promise<T> => Promise.reject(fn(e)));
 }
 
 export default lmap;

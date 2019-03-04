@@ -4,12 +4,13 @@ import lmap from './lmap';
 
 describe('async/lmap', () => {
   test('should map on the left of a promise', async (): Promise<any> => {
-    const fn: Function = jest.fn();
+    const expected: number = 8;
+    const fn: Function = jest.fn().mockImplementation((v: number): number => expected);
     try {
       await lmap(fn, Promise.reject(4));
-      expect(fn).toHaveBeenCalled();
     } catch (e) {
-      expect(e).not.toBeUndefined();
+      expect(fn).toHaveBeenCalled();
+      expect(e).toEqual(expected);
     }
   });
 

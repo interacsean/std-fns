@@ -6,10 +6,10 @@
  * @param p {Promise<T | never>}
  * @returns {Promise<T | never>}
  */
-function map<T>(
-  fn: (T) => any,
+function map<T, R>(
+  fn: (T) => R,
   p: Promise<T>
-): Promise<any> {
+): Promise<R> {
   return p.then(fn);
 }
 
