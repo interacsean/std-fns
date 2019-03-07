@@ -6,7 +6,7 @@ Standard Functions is a library aimed to fill in the gaps in the JS standard lib
 ## Functions
 
 <dl>
-<dt><a href="#bimap">bimap(leftFn, rightFn, p)</a> ⇒ <code>Promise.&lt;(T|never)&gt;</code></dt>
+<dt><a href="#bimap">bimap(leftFn, rightFn, p)</a> ⇒ <code>Promise.&lt;(R|never)&gt;</code></dt>
 <dd><p>Map over the success or error of a promise.</p>
 </dd>
 <dt><a href="#fmap">fmap(fn, p)</a> ⇒ <code>Promise.&lt;(T|never)&gt;</code></dt>
@@ -80,7 +80,7 @@ Works like the ! operator on the result of the function provided</p>
 
 <a name="bimap"></a>
 
-## bimap(leftFn, rightFn, p) ⇒ <code>Promise.&lt;(T\|never)&gt;</code>
+## bimap(leftFn, rightFn, p) ⇒ <code>Promise.&lt;(R\|never)&gt;</code>
 Map over the success or error of a promise.
 
 **Kind**: global function  
@@ -233,7 +233,8 @@ Call instance method of an object.
 <a name="negate"></a>
 
 ## negate(fn) ⇒ <code>function</code>
-Creates a function which negates the value of the result.Works like the ! operator on the result of the function provided
+Creates a function which negates the value of the result.
+Works like the ! operator on the result of the function provided
 
 **Kind**: global function  
 

@@ -5,14 +5,14 @@
  * @param leftFn {Function}
  * @param rightFn {Function}
  * @param p {Promise<T | never>}
- * @returns {Promise<T | never>}
+ * @returns {Promise<R | never>}
  */
-function bimap<T>(
-  leftFn: (Error) => any,
-  rightFn: (T) => any,
+function bimap<T, R>(
+  leftFn: (any) => any,
+  rightFn: (T) => R,
   p: Promise<T>
-): Promise<T> {
-  return p.then(rightFn, leftFn);
+): Promise<R> {
+  return p.then(rightFn, (e: any): Promise<R> => Promise.reject(leftFn(e)));
 }
 
 export default bimap;

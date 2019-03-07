@@ -9,7 +9,7 @@
   "scripts": {
     "test": "jest ./src",
     "check": "eslint ./src && flow ./src",
-    "build": "yarn check && babel src/ -d ./ --ignore **/*spec.js && yarn build:docs && yarn build:types",
+    "build": "npm run check && babel src/ -d ./ --ignore **/*spec.js && npm run build:docs && npm run build:types",
     "build:types": "flow-copy-source -v -i **/*spec.js src ./",
     "build:docs": "node ./scripts/docs"
   },

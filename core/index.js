@@ -4,6 +4,24 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _always = require('./always/always');
+
+Object.defineProperty(exports, 'always', {
+  enumerable: true,
+  get: function () {
+    return _interopRequireDefault(_always).default;
+  }
+});
+
+var _and = require('./and/and');
+
+Object.defineProperty(exports, 'and', {
+  enumerable: true,
+  get: function () {
+    return _interopRequireDefault(_and).default;
+  }
+});
+
 var _compose = require('./compose/compose');
 
 Object.defineProperty(exports, 'compose', {
@@ -49,6 +67,42 @@ Object.defineProperty(exports, 'identity', {
   }
 });
 
+var _inst = require('./inst/inst');
+
+Object.defineProperty(exports, 'inst', {
+  enumerable: true,
+  get: function () {
+    return _interopRequireDefault(_inst).default;
+  }
+});
+
+var _negate = require('./negate/negate');
+
+Object.defineProperty(exports, 'negate', {
+  enumerable: true,
+  get: function () {
+    return _interopRequireDefault(_negate).default;
+  }
+});
+
+var _not = require('./not/not');
+
+Object.defineProperty(exports, 'not', {
+  enumerable: true,
+  get: function () {
+    return _interopRequireDefault(_not).default;
+  }
+});
+
+var _or = require('./or/or');
+
+Object.defineProperty(exports, 'or', {
+  enumerable: true,
+  get: function () {
+    return _interopRequireDefault(_or).default;
+  }
+});
+
 var _partial = require('./partial/partial');
 
 Object.defineProperty(exports, 'partial', {
@@ -64,6 +118,15 @@ Object.defineProperty(exports, 'partialRight', {
   enumerable: true,
   get: function () {
     return _interopRequireDefault(_partialRight).default;
+  }
+});
+
+var _trim = require('./trim/trim');
+
+Object.defineProperty(exports, 'trim', {
+  enumerable: true,
+  get: function () {
+    return _interopRequireDefault(_trim).default;
   }
 });
 
