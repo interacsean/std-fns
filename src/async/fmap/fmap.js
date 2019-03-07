@@ -3,8 +3,8 @@
 /**
  * Map over the value of a promise. The function provided should return another Promise.
  * @param fn {Function}
- * @param p {Promise<T | never>}
- * @returns {Promise<T | never>}
+ * @param p {Promise<T>}
+ * @returns {Promise<T>}
  */
 function fmap<T>(
   fn: (any) => Promise<T>,

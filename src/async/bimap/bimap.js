@@ -2,13 +2,13 @@
 
 /**
  * Map over the success or error of a promise.
- * @param leftFn {Function}
- * @param rightFn {Function}
- * @param p {Promise<T | never>}
- * @returns {Promise<T | never>}
+ * @param leftFn {(any) => any}
+ * @param rightFn {(T) => any}
+ * @param p {Promise<T>}
+ * @returns {Promise<T>}
  */
 function bimap<T>(
-  leftFn: (Error) => any,
+  leftFn: (any) => any,
   rightFn: (T) => any,
   p: Promise<T>
 ): Promise<T> {
